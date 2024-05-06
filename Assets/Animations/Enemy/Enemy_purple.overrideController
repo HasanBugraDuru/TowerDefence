@@ -7,5 +7,11 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy_purple
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 2514a631bbdcfc146915f80239bbedea, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 71ec3b9dd45905448bb89c5c85480bf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bc2606676a0e9f24b9be4ab71a560a12, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4de60843f8194f8449e4b55c84107ad3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bfb7d16827c7ac54fb09ebdab5c6faf5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6336abb9d3acd714cb02ec68f6ccfcf3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6128d422420712f498c7284c16b725fd, type: 2}
