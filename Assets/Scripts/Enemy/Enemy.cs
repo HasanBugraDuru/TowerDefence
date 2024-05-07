@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static Action OnEndReached;
+
     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private Waypoint waypoint;
+
+    public Waypoint Waypoint { get; set; }
 
     private int currentWaypointIndex ;
-    public Vector3 CurrentPointPosition => waypoint.GetWaypointPosition(currentWaypointIndex);
+    public Vector3 CurrentPointPosition => Waypoint.GetWaypointPosition(currentWaypointIndex);
 
     private void Update()
     {
@@ -30,12 +34,22 @@ public class Enemy : MonoBehaviour
     }
     private void UpdateCurrentPointIndex()
     {
-        int lastWaypointIndex = waypoint.Points.Length-1;
+        int lastWaypointIndex = Waypoint.Points.Length-1;
         if (currentWaypointIndex < lastWaypointIndex) currentWaypointIndex++;
+        else
+        {
+            ReturnEnemyToPool();
+        }
+    }
+
+    private void ReturnEnemyToPool()
+    {
+        OnEndReached?.Invoke();
+        ObjectPooler.ReturnToPool(gameObject);
     }
     private void Start()
     {
-        currentWaypointIndex = 0 ;
+       currentWaypointIndex = 0 ;
     }
 
 }

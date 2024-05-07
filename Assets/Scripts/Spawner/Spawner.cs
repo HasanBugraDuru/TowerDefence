@@ -13,7 +13,6 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] public SpawnerMods spawnMod = SpawnerMods.Fixed;
 
-    [SerializeField] private  GameObject TestGo;
     [SerializeField] private float enemyCount = 10;
 
     [Header("Fixed Delay")]
@@ -23,6 +22,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float minRandomDelay;
     [SerializeField] private float maxRandomDelay;
 
+    private Waypoint _waypoint;
     private ObjectPooler _pooler;
 
     private float _spawntimer;
@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
+        _waypoint = GetComponent<Waypoint>();
         _pooler = GetComponent<ObjectPooler>();
     }
 
@@ -50,6 +51,11 @@ public class Spawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject newIstance = _pooler.GerInstanceFromPool();
+        Enemy enemy  = newIstance.GetComponent<Enemy>();
+        enemy.Waypoint = _waypoint;
+
+        enemy.transform.localPosition =transform.position;
+
         newIstance.SetActive(true);
     }
 
