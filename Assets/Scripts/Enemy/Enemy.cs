@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3f;
 
+    public EnemyHealth EnemyHealth { get; set; }
     public float MoveSpeed { get; set; }
     public Waypoint Waypoint { get; set; }
 
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
     {
         currentWaypointIndex = 0;
         MoveSpeed = moveSpeed;
+        EnemyHealth = GetComponent<EnemyHealth>(); 
         _enemyHealth = GetComponent<EnemyHealth>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         LastPointPosition = transform.position;

@@ -35,7 +35,7 @@ public class EnemyAnimations : MonoBehaviour
     {
          _enemy.StopMoving();
         PlayHurtAnimation();
-        yield return new WaitForSeconds(GetCurrentAnimatoinLength() + 0.3f );
+        yield return new WaitForSeconds(GetCurrentAnimatoinLength());
         _enemy.ResumeMoving();
     }
 
