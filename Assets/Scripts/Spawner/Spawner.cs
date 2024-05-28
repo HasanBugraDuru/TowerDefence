@@ -98,7 +98,6 @@ public class Spawner : MonoBehaviour
         _enemiesRamaning--;
         if(_enemiesRamaning <= 0) 
         {
-
             StartCoroutine(NextWave());
         }
     }

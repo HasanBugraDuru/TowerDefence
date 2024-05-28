@@ -89,5 +89,6 @@ public class Enemy : MonoBehaviour
     public void ResetEnemy()
     {
         currentWaypointIndex = 0;
+        this.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

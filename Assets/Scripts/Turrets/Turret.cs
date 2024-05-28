@@ -61,6 +61,13 @@ public class Turret : MonoBehaviour
             }
         }   
     }
+    public void RemoveEnemyFromList(Enemy enemy)
+    {
+        if (enemies.Contains(enemy))
+        {
+            enemies.Remove(enemy);
+        }
+    }
     private void OnDrawGizmos()
     {
         if (!_gamestarted)

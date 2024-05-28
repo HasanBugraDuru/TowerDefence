@@ -51,6 +51,7 @@ public class EnemyHealth : MonoBehaviour
         {
             CurrentHealth = 0;
             Die();
+
         }
         else
         {
