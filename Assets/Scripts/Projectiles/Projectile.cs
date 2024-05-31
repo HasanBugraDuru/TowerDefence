@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float minDistanceToDealDamage= 0.1f;
+    [SerializeField] private PlayerDatas PlayerDatas;
+    [SerializeField] private int CoinGainAmaount;
 
 
     public float  Damage { get; set; }
@@ -29,7 +31,12 @@ public class Projectile : MonoBehaviour
         if(distanceToTarget < minDistanceToDealDamage) 
         {
             _enemyTarget.EnemyHealth.DealDamage(Damage);
-            if (_enemyTarget.EnemyHealth.CurrentHealth <= 0) TurretOwner.turret.RemoveEnemyFromList(_enemyTarget);
+            if (_enemyTarget.EnemyHealth.CurrentHealth <= 0)
+            {
+                TurretOwner.turret.RemoveEnemyFromList(_enemyTarget);
+                PlayerDatas.CoinAmaount += 5;
+            }
+            
             TurretOwner.ResetTurretProjectile();
             ObjectPooler.ReturnToPool(gameObject);
         }

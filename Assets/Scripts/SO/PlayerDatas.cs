@@ -7,5 +7,5 @@ public class PlayerDatas : ScriptableObject
 {
     [SerializeField] public bool MusicOn;
     [SerializeField] public bool SoundOn;
-    [SerializeField] public int Cointest;
+    [SerializeField] public int CoinAmaount;
 }
