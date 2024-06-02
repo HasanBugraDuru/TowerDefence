@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class MarketManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] public PlayerDatas playerDatas;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        playerDatas.Market = this.gameObject;
+        this.gameObject.SetActive(false);
     }
 }

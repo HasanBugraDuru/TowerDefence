@@ -95,7 +95,7 @@ public class Spawner : MonoBehaviour
     }
     private void RecordEnemy(Enemy enemy)
     {
-        _enemiesRamaning--;
+        if(_enemiesRamaning>0) _enemiesRamaning--;
         if(_enemiesRamaning <= 0) 
         {
             StartCoroutine(NextWave());
