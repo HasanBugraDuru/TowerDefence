@@ -9,7 +9,10 @@ public class MarketManager : MonoBehaviour
 
     private void Awake()
     {
-        playerDatas.Market = this.gameObject;
+        playerDatas.Market = transform.gameObject;
+    }
+    private void Start()
+    {
         this.gameObject.SetActive(false);
     }
 }

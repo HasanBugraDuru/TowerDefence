@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 211525981
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1677247529, guid: 9d966379c77999a44a61b9aa923155d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 3632455743560884353}
-  DelayBtwAccakts: 1
+  DelayBtwAccakts: 0.5
   damage: 2
   turret: {fileID: 0}
 --- !u!114 &1506304950043173079
@@ -942,6 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cb380eb08aa914d9bbf092cae5fec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDatas: {fileID: 0}
 --- !u!114 &4011820129609385537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1030,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 211525981
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: 1950069811, guid: 9d966379c77999a44a61b9aa923155d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
