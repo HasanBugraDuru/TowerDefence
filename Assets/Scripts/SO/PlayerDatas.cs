@@ -11,4 +11,6 @@ public class PlayerDatas : ScriptableObject
     [SerializeField] public GameObject UpgradeLocation;
     [SerializeField] public GameObject Market;
     [SerializeField] public GameObject Esc;
+    [SerializeField] public bool isPaused;
+    [SerializeField] public bool EscOpened;
 }

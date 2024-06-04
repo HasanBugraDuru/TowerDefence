@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7387cea87329a054f892cbfadea4a3ac, type: 3}
   m_Name: PlayerDatas
   m_EditorClassIdentifier: 
-  MusicOn: 1
+  MusicOn: 0
   SoundOn: 1
-  Cointest: 0
+  CoinAmaount: 55
+  UpgradeLocation: {fileID: 0}
+  Market: {fileID: 0}
+  Esc: {fileID: 0}
+  isPaused: 1
+  EscOpened: 1
