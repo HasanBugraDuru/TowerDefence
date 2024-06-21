@@ -12,7 +12,7 @@ public class BackToMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape)) ShowEsc();
     }
-    private void ShowEsc()
+    public void ShowEsc()
     {
         playerDatas.EscOpened = !playerDatas.EscOpened;
         if (playerDatas.EscOpened)
@@ -34,6 +34,9 @@ public class BackToMenu : MonoBehaviour
     }
     public void MainMenu()
     {
+        playerDatas.EscOpened = false;
+        playerDatas.isPaused = false;
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
     private void TogglePause()

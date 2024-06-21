@@ -20,7 +20,7 @@ public class Logo : MonoBehaviour
     {
         if (meow.isPlaying == false)
         {
-            SceneManager.LoadScene("MainManu");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
