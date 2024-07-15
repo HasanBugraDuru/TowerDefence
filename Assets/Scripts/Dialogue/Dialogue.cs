@@ -8,10 +8,15 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textComponent;
     [SerializeField] private string[] lines;
     [SerializeField] private float textspeed;
+    private AudioSource Voice;
     private int index;
-
+    private void Awake()
+    {
+        Voice = GetComponent<AudioSource>(); 
+    }
     private void Start()
     {
+        Voice.Play();
         textComponent.text = string.Empty;
         StartDialogue();
     }
@@ -21,10 +26,12 @@ public class Dialogue : MonoBehaviour
         {
             if(textComponent.text == lines[index]) 
             {
+                Voice.UnPause();
                 NextLine();
             }
             else
             {
+                Voice.Stop();
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
